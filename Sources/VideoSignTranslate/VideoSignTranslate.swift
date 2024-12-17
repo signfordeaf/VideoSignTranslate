@@ -4,9 +4,8 @@ import Kingfisher
 import SwiftUI
 
 @available(iOS 15.0, *)
-public struct CustomVideoPlayerView<Content: View>: View {
+public struct SignVideoPlayerView<Content: View>: View {
     let videoURL: URL
-    let gifName: String
     let videoPlayer: Content
     let playerContent: AVPlayer
 
@@ -18,11 +17,10 @@ public struct CustomVideoPlayerView<Content: View>: View {
     let apiService = ApiService.shared
 
     public init(
-        videoURL: URL, videoAssetName: String?, gifName: String,
+        videoURL: URL, videoAssetName: String?,
         videoPlayer: Content, playerC: AVPlayer
     ) {
         self.videoURL = videoURL
-        self.gifName = gifName
         self.videoPlayer = videoPlayer
         self.playerContent = playerC
     }
